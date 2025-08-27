@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- !bootstrap icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <!-- !Glide.js Css CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" />
+  <title>E-Commerce | Home</title>
+</head>
+
+<body>
+  <!-- ! header start -->
+  <header>
+    <div class="global-notification">
+      <div class="container">
+        <p>
+          HANDCRAFTED WITH LOVE | FREE SHIPPING ON ORDERS OVER $50 | <a href="shop.html">SHOP NOW</a>
+        </p>
+      </div>
+    </div>
+    <div class="header-row">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="header-mobile">
+            <i class="bi bi-list" id="btn-menu"></i>
+          </div>
+          <div class="header-left">
+            <a href="/" class="logo">HeavenCraft</a>
+          </div>
+          <div class="header-center" id="sidebar">
+            <nav class="navigation">
+              <ul class="menu-list">
+                <li class="menu-list-item">
+                  <a href="/" class="menu-link active">Home</a>
+                </li>
+                <li class="menu-list-item">
+                  <a href="shop.html" class="menu-link">Shop</a>
+                </li>
+                <li class="menu-list-item">
+                  <a href="shop.html" class="menu-link">Categories</a>
+                </li>
+                <li class="menu-list-item">
+                  <a href="blog.html" class="menu-link">Our Story</a>
+                </li>
+                <li class="menu-list-item">
+                  <a href="contact.html" class="menu-link">Contact</a>
+                </li>
+                <li class="menu-list-item">
+                  <a href="#" class="menu-link">Custom Orders</a>
+                </li>
+              </ul>
+            </nav>
+            <i class="bi-x-circle" id="close-sidebar"></i>
+          </div>
+          <div class="header-right">
+            <div class="header-right-links">
+              <a href="account.html">
+                <i class="bi bi-person"></i>
+              </a>
+              <button class="search-button">
+                <i class="bi bi-search"></i>
+              </button>
+              <a href="#">
+                <i class="bi bi-heart"></i>
+              </a>
+              <div class="header-cart">
+                <a href="cart.html" class="header-cart-link">
+                  <i class="bi bi-bag"></i>
+                  <span class="header-cart-count">0</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ! header end -->
+
+  <!-- ! modal search start -->
+  <div class="modal-search">
+    <div class="modal-wrapper">
+      <h3 class="modal-title">Search for products</h3>
+      <p class="modal-text">
+        Start typing to see products you are looking for.
+      </p>
+      <div class="search">
+        <input type="text" placeholder="Search a product" />
+        <button><i class="bi bi-search"></i></button>
+      </div>
+      </form>
+      <div class="search-result">
+        <div class="search-heading">
+          <h3>RESULT FROM PRODUCT</h3>
+        </div>
+        <div class="results">
+
+        </div>
+      </div>
+      <i class="bi bi-x-circle" id="close-modal-search"></i>
+    </div>
+  </div>
+  <!-- ! modal search end -->
+
+  <!-- ! modal dialog start -->
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-close">
+        <i class="bi bi-x"></i>
+      </div>
+      <div class="modal-image">
+        <img src="img/modal-dialog.jpg" alt="modal">
+      </div>
+      <div class="popup-wrapper">
+        <div class="popup-content">
+          <div class="popup-title">
+            <h3>NEWSLETTER</h3>
+          </div>
+          <p class="popup-text">
+            Sign up to our newsletter and get exclusive deals you won find any where else straight to your inbox!
+          </p>
+          <form class="popup-form">
+            <input type="text" placeholder="Enter Email Address Here">
+            <button class="btn btn-primary">SUBSCRIBE</button>
+            <label>
+              <input type="checkbox">
+              <span>Don't show this popup again</span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ! modal dialog end -->
+
+  <!-- ! slider start -->
+  <section class="slider">
+    <div class="slider-elements">
+      <div class="slider-item fade">
+        <div class="slider-image">
+          <img src="img/slider/slider1.jpg" class="img-fluid" alt="Handcrafted Jewelry Collection" />
+        </div>
+        <div class="container">
+          <p class="slider-title">HANDMADE WITH LOVE</p>
+          <h2 class="slider-heading">Artisan Jewelry Collection</h2>
+          <a href="shop.html" class="btn btn-lg btn-primary">Shop Now</a>
+        </div>
+      </div>
+      <div class="slider-item fade">
+        <div class="slider-image">
+          <img src="img/slider/slider2.jpg" class="img-fluid" alt="Handwoven Textiles" />
+        </div>
+        <div class="container">
+          <p class="slider-title">NEW ARRIVALS</p>
+          <h2 class="slider-heading">Handwoven Textiles & Home Decor</h2>
+          <a href="shop.html" class="btn btn-lg btn-primary">Discover More</a>
+        </div>
+      </div>
+      <div class="slider-item fade">
+        <div class="slider-image">
+          <img src="img/slider/slider3.jpg" class="img-fluid" alt="Sustainable Crafts" />
+        </div>
+        <div class="container">
+          <p class="slider-title">ETHICALLY MADE</p>
+          <h2 class="slider-heading">Sustainable & Thoughtful Creations</h2>
+          <a href="about.html" class="btn btn-lg btn-primary">Our Story</a>
+        </div>
+      </div>
+      <div class="slider-buttons">
+        <button onclick="plusSlide(-1)">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <button onclick="plusSlide(1)">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+      <div class="slider-dots">
+        <button class="slider-dot active" onclick="currentSlide(1)">
+          <span></span>
+        </button>
+        <button class="slider-dot" onclick="currentSlide(2)">
+          <span></span>
+        </button>
+        <button class="slider-dot" onclick="currentSlide(3)">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- ! slider end -->
+
+  <!-- ! category start -->
+  <section class="categories">
+    <div class="container">
+      <div class="section-title">
+        <h2>Handcrafted Categories</h2>
+        <p>Discover Our Unique Artisan Creations</p>
+      </div>
+
+      <ul class="category-list">
+        <li class="category-item">
+          <a href="#">
+            <img src="img/categories/categories1.png" alt="Handmade Box - Decorative storage boxes" class="category-image" />
+            <span class="category-title">Handmade Boxes</span>
+          </a>
+        </li>
+        <li class="category-item">
+          <a href="#">
+            <img src="img/categories/categories2.png" alt="Hanging Lamps - Decorative lighting" class="category-image" />
+            <span class="category-title">Hanging Lamps</span>
+          </a>
+        </li>
+        <li class="category-item">
+          <a href="#">
+            <img src="img/categories/categories3.png" alt="Handcrafted Pots - Planters and vases" class="category-image" />
+            <span class="category-title">Handcrafted Pots</span>
+          </a>
+        </li>
+        <li class="category-item">
+          <a href="#">
+            <img src="img/categories/categories4.png" alt="Artisanal Tea Cups - Handpainted ceramics" class="category-image" />
+            <span class="category-title">Artisanal Tea Cups</span>
+          </a>
+        </li>
+        <li class="category-item">
+          <a href="#">
+            <img src="img/categories/categories5.png" alt="Jute Lamps - Eco-friendly lighting" class="category-image" />
+            <span class="category-title">Jute Lamps</span>
+          </a>
+        </li>
+        <li class="category-item">
+          <a href="#">
+            <img src="img/categories/categories6.png" alt="Diya Holders - Traditional clay diyas" class="category-image" />
+            <span class="category-title">Diya Holders</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- ! category end-->
+
+  <!-- ! product start -->
+  <section class="products">
+    <div class="container">
+      <div class="section-title">
+        <h2>Featured Handmade Products</h2>
+        <p>Unique Artisan Creations Handcrafted with Love</p>
+      </div>
+      <div class="product-wrapper product-carousel">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="product-list glide__slides" id="product-list">
+            <li class="product-item glide__slide">
+              <div class="product-image">
+                <a href="#">
+                  <img src="img/products/product1/1.png" alt="" class="img1" />
+                  <img src="img/products/product1/2.png" alt="" class="img2" />
+                </a>
+              </div>
+              <div class="product-info">
+                <a href="#" class="product-title"> Analogue Resin Strap </a>
+                <ul class="product-star">
+                  <li>
+                    <i class="bi bi-star-fill"></i>
+                  </li>
+                  <li>
+                    <i class="bi bi-star-fill"></i>
+                  </li>
+                  <li>
+                    <i class="bi bi-star-fill"></i>
+                  </li>
+                  <li>
+                    <i class="bi bi-star-fill"></i>
+                  </li>
+                  <li>
+                    <i class="bi bi-star-half"></i>
+                  </li>
+                </ul>
+                <div class="product-prices">
+                  <strong class="new-price">$108.00</strong>
+                  <span class="old-price">$165</span>
+                </div>
+                <span class="product-discount"> -17% </span>
+                <div class="product-links">
+                  <button>
+                    <i class="bi bi-basket-fill"></i>
+                  </button>
+                  <button>
+                    <i class="bi bi-heart-fill"></i>
+                  </button>
+                  <a href="#">
+                    <i class="bi bi-eye-fill"></i>
+                  </a>
+                  <a href="#">
+                    <i class="bi bi-share-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ! product end -->
+
+  <!-- ! campaigns start -->
+  <section class="campaigns">
+    <div class="container">
+      <div class="campaigns-wrapper">
+        <div class="campaign-item">
+          <h3 class="campaign-title">
+            Handmade Jewelry <br />
+            Collection <br />
+            Launch
+          </h3>
+          <p class="campaing-desc">
+            Discover our exclusive handcrafted jewelry pieces made with love and precision
+          </p>
+          <a href="#" class="btn btn-primary">
+            Shop Now
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+        <div class="campaign-item">
+          <h3 class="campaign-title">
+            Handmade Home <br />
+            Decor <br />
+            Launch
+          </h3>
+          <p class="campaing-desc">
+            Discover our exclusive handcrafted Home Decor pieces made with love and precision
+          </p>
+          <a href="#" class="btn btn-primary">
+            Shop Now
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="campaigns-wrapper">
+        <div class="campaign-item">
+          <h3 class="campaign-title">
+            Handmade Pots <br />
+            Collection <br />
+            Launch
+          </h3>
+          <p class="campaing-desc">
+            Discover our exclusive handcrafted pots pieces made with love and precision
+          </p>
+          <a href="#" class="btn btn-primary">
+            Shop Now
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+        <div class="campaign-item">
+          <h3 class="campaign-title">
+            Handmade Handloom <br />
+            Collection <br />
+            Launch
+          </h3>
+          <p class="campaing-desc">
+            Discover our exclusive handcrafted Handloo pieces made with love and precision
+          </p>
+          <a href="#" class="btn btn-primary">
+            Shop Now
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ! campaigns end -->
+
+  <!-- ! product start -->
+  <section class="products">
+    <div class="container">
+      <div class="section-title">
+        <h2>New Arrivals</h2>
+        <p>Summer Collection New Modern Design</p>
+      </div>
+      <div class="product-wrapper product-carousel2">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="product-list glide__slides" id="product-list-2">
+            <li class="product-item glide__slide">
+              <div class="product-image">
+                <a href="#">
+                  <img src="img/products/product1/1.png" alt="" class="img1" />
+                  <img src="img/products/product1/2.png" alt="" class="img2" />
+                </a>
+              </div>
+              <div class="product-info">
+                <a href="#" class="product-title"> Analogue Resin Strap </a>
+                <ul class="product-star">
+                  <li>
+                    <i class="bi bi-star-fill"></i>
+                  </li>
+                  <li>
+                    <i class="bi bi-star-fill"></i>
+                  </li>
+                  <li>
+                    <i class="bi bi-star-fill"></i>
+                  </li>
+                  <li>
+                    <i class="bi bi-star-fill"></i>
+                  </li>
+                  <li>
+                    <i class="bi bi-star-half"></i>
+                  </li>
+                </ul>
+                <div class="product-prices">
+                  <strong class="new-price">$108.00</strong>
+                  <span class="old-price">$165</span>
+                </div>
+                <span class="product-discount"> -17% </span>
+                <div class="product-links">
+                  <button>
+                    <i class="bi bi-basket-fill"></i>
+                  </button>
+                  <button>
+                    <i class="bi bi-heart-fill"></i>
+                  </button>
+                  <a href="#">
+                    <i class="bi bi-eye-fill"></i>
+                  </a>
+                  <a href="#">
+                    <i class="bi bi-share-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ! product end -->
+
+  <!-- ! blogs start  -->
+  <section class="blogs">
+    <div class="container">
+      <div class="section-title">
+        <h2>From Our Blog</h2>
+        <p>Summer Collection New Modern Design</p>
+      </div>
+      <ul class="blog-list">
+        <li class="blog-item">
+          <a href="blog.html" class="blog-image">
+            <img src="img/blogs/blog1.jpg" alt="" />
+          </a>
+          <div class="blog-info">
+            <div class="blog-info-top">
+              <span>25 Feb, 2021</span>
+              -
+              <span>0 Comments</span>
+            </div>
+            <div class="blog-info-center">
+              <a href="blog.html"> Unique gift for house warming ceremony </a>
+            </div>
+            <div class="blog-info-bottom">
+              <a href="blog.html">Read More</a>
+            </div>
+          </div>
+        </li>
+        <li class="blog-item">
+          <a href="blog.html" class="blog-image">
+            <img src="img/blogs/blog2.jpg" alt="" />
+          </a>
+          <div class="blog-info">
+            <div class="blog-info-top">
+              <span>25 Feb, 2021</span>
+              -
+              <span>0 Comments</span>
+            </div>
+            <div class="blog-info-center">
+              <a href="blog.html"> Elevate Your Home Decor </a>
+            </div>
+            <div class="blog-info-bottom">
+              <a href="blog.html">Read More</a>
+            </div>
+          </div>
+        </li>
+        <li class="blog-item">
+          <a href="blog.html" class="blog-image">
+            <img src="img/blogs/blog3.jpg" alt="" />
+          </a>
+          <div class="blog-info">
+            <div class="blog-info-top">
+              <span>25 Feb, 2021</span>
+              -
+              <span>0 Comments</span>
+            </div>
+            <div class="blog-info-center">
+              <a href="blog.html"> Unique Navratri Decoration </a>
+            </div>
+            <div class="blog-info-bottom">
+              <a href="blog.html">Read More</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- ! blogs end -->
+
+  <!-- ! brands start  -->
+  <section class="brands">
+    <div class="container">
+      <ul class="brand-list">
+        <li class="brand-item">
+          <a href="#">
+            <img src="img/brands/brand1.png" alt="" />
+          </a>
+        </li>
+        <li class="brand-item">
+          <a href="#">
+            <img src="img/brands/brand2.png" alt="" />
+          </a>
+        </li>
+        <li class="brand-item">
+          <a href="#">
+            <img src="img/brands/brand3.png" alt="" />
+          </a>
+        </li>
+        <li class="brand-item">
+          <a href="#">
+            <img src="img/brands/brand4.png" alt="" />
+          </a>
+        </li>
+        <li class="brand-item">
+          <a href="#">
+            <img src="img/brands/brand5.png" alt="" />
+          </a>
+        </li>
+        <li class="brand-item">
+          <a href="#">
+            <img src="img/brands/brand1.png" alt="" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- ! brands end  -->
+
+  <!-- ! campaign single start -->
+  <section class="campaign-single">
+    <div class="container">
+      <div class="campaign-wrapper">
+        <h2>New Season Sale</h2>
+        <strong>40% OFF</strong>
+        <span></span>
+        <a href="#" class="btn btn-lg">
+          SHOP NOW
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- ! campaign single end -->
+
+  <!-- ! policy start -->
+  <section class="policy">
+    <div class="container">
+      <ul class="policy-list">
+        <li class="policy-item">
+          <i class="bi bi-truck"></i>
+          <div class="policy-texts">
+            <strong>FREE DELIVERY</strong>
+            <span>From $59.89</span>
+          </div>
+        </li>
+        <li class="policy-item">
+          <i class="bi bi-headset"></i>
+          <div class="policy-texts">
+            <strong>SUPPORT 24/7</strong>
+            <span>Online 24 hours</span>
+          </div>
+        </li>
+        <li class="policy-item">
+          <i class="bi bi-arrow-clockwise"></i>
+          <div class="policy-texts">
+            <strong>30 DAYS RETURN</strong>
+            <span>Simply return it within 30 days</span>
+          </div>
+        </li>
+        <li class="policy-item">
+          <i class="bi bi-credit-card"></i>
+          <div class="policy-texts">
+            <strong>PAYMENT METHOD</strong>
+            <span>Secure Payment</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- ! policy end -->
+
+  <!-- ! footer start -->
+  <section class="footer">
+    <div class="subscribe-contact-row">
+      <div class="container">
+        <div class="subscribe-contact-wrapper">
+          <div class="subscribe-wrapper">
+            <div class="footer-subscribe">
+              <div class="footer-subscribe-top">
+                <h3 class="subscribe-title">
+                  Get our emails for info on new items, sales and more.
+                </h3>
+                <p class="subscribe-desc">
+                  We'll email you a voucher worth $10 off your first order
+                  over $50.
+                </p>
+              </div>
+              <div class="footer-subscribe-bottom">
+                <form>
+                  <input type="text" placeholder="enter your email addres" />
+                  <button class="btn">Subscribe</button>
+                </form>
+                <p class="privacy-text">
+                  By subscribing you agree to our
+                  <a href="#">Terms & Conditions and Privacy & Cookies Policy.</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-wrapper">
+            <div class="footer-contact-top">
+              <h3 class="contact-title">Need help? <br>
+                (+90) 123 456 78 90
+              </h3>
+              <p class="contact-desc">We are available 8:00am – 7:00pm
+              </p>
+            </div>
+            <div class="footer-contact-bottom">
+              <div class="download-app">
+                <a href="#">
+                  <img src="img/footer/app-store.png" alt="">
+                </a>
+                <a href="#">
+                  <img src="img/footer/google-play.png" alt="">
+                </a>
+              </div>
+              <p class="privacy-text">
+                <strong>Shopping App:</strong> Try our View in Your Room feature, manage registries and save payment
+                info.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="widgets-row">
+      <div class="container">
+        <div class="footer-widgets">
+          <div class="brand-info">
+            <div class="footer-logo">
+              <a href="/" class="logo">HeavenCraft</a>
+            </div>
+            <div class="footer-desc">
+              Discover unique, handcrafted treasures that bring beauty and artistry into your home. Each piece is carefully made by skilled artisans with love and attention to detail.
+            </div>
+            <div class="footer-contact">
+              <p>
+                <a href="tel:123456789">(+800) 1234 5678 90</a> -
+                <a href="mailto:info@example.com">info@example.com</a>
+              </p>
+            </div>
+          </div>
+          <div class="widget-nav-menu">
+            <h4>Information</h4>
+            <ul class="menu-list">
+              <li>
+                <a href="#">Our Story</a>
+              </li>
+              <li>
+                <a href="#">Artisan Partners</a>
+              </li>
+              <li>
+                <a href="#">Sustainability</a>
+              </li>
+              <li>
+                <a href="#">Press & Media</a>
+              </li>
+              <li>
+                <a href="#">Careers</a>
+              </li>
+            </ul>
+          </div>
+          <div class="widget-nav-menu">
+            <h4>Account</h4>
+            <ul class="menu-list">
+              <li>
+                <a href="#">Order History</a>
+              </li>
+              <li>
+                <a href="#">Wishlist</a>
+              </li>
+              <li>
+                <a href="#">Custom Orders</a>
+              </li>
+              <li>
+                <a href="#">Address Book</a>
+              </li>
+              <li>
+                <a href="#">Gift Cards</a>
+              </li>
+            </ul>
+          </div>
+          <div class="widget-nav-menu">
+            <h4>Shop</h4>
+            <ul class="menu-list">
+              <li>
+                <a href="#">New Arrivals</a>
+              </li>
+              <li>
+                <a href="#">Best Sellers</a>
+              </li>
+              <li>
+                <a href="#">Limited Edition</a>
+              </li>
+              <li>
+                <a href="#">Gift Guide</a>
+              </li>
+              <li>
+                <a href="#">Sale Items</a>
+              </li>
+            </ul>
+          </div>
+          <div class="widget-nav-menu">
+            <h4>Categories</h4>
+            <ul class="menu-list">
+              <li>
+                <a href="#">Home Decor</a>
+              </li>
+              <li>
+                <a href="#">Jewelry</a>
+              </li>
+              <li>
+                <a href="#">Textiles</a>
+              </li>
+              <li>
+                <a href="#">Pottery</a>
+              </li>
+              <li>
+                <a href="#">Accessories</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-row">
+      <div class="container">
+        <div class="footer-copyright">
+          <div class="site-copyright">
+            <p>
+              &copy; 2025 HeavenCraft Handmade. All rights reserved.
+              Handcrafted with &hearts; by skilled artisans worldwide.
+            </p>
+          </div>
+          <a href="#">
+            <img src="img/footer/cards.png" alt="">
+          </a>
+          <div class="footer-menu">
+            <ul class="footer-menu-list">
+              <li class="list-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="list-item">
+                <a href="#">Terms and Conditions</a>
+              </li>
+              <li class="list-item">
+                <a href="#">Returns Policy</a>
+              </li>
+            </ul>
+              <ul class="footer-menu-list">
+                <li class="list-item">
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <li class="list-item">
+                  <a href="#">Terms and Conditions</a>
+                </li>
+                <li class="list-item">
+                  <a href="#">Returns Policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ! footer end -->
+
+  <!-- scripts start -->
+  <script src="js/header-auth.js"></script>
+  <script src="js/main.js" type="module"></script>
+  <script src="js/slider.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script src="js/glide.js" type="module"></script>
+  <!-- scripts end -->
+
+</body>
+
+</html>

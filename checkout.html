@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- !bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>E-Commerce | Checkout</title>
+</head>
+
+<body>
+    <!-- ! header start -->
+    <header>
+        <div class="global-notification">
+          <div class="container">
+            <p>
+              HANDCRAFTED WITH LOVE | FREE SHIPPING ON ORDERS OVER $50 | <a href="shop.html">SHOP NOW</a>
+            </p>
+          </div>
+        </div>
+        <div class="header-row">
+          <div class="container">
+            <div class="header-wrapper">
+              <div class="header-mobile">
+                <i class="bi bi-list" id="btn-menu"></i>
+              </div>
+              <div class="header-left">
+                <a href="/" class="logo">HeavenCraft</a>
+              </div>
+              <div class="header-center" id="sidebar">
+                <nav class="navigation">
+                  <ul class="menu-list">
+                    <li class="menu-list-item">
+                      <a href="/" class="menu-link active">Home</a>
+                    </li>
+                    <li class="menu-list-item">
+                      <a href="shop.html" class="menu-link">Shop</a>
+                    </li>
+                    <li class="menu-list-item">
+                      <a href="shop.html" class="menu-link">Categories</a>
+                    </li>
+                    <li class="menu-list-item">
+                      <a href="blog.html" class="menu-link">Our Story</a>
+                    </li>
+                    <li class="menu-list-item">
+                      <a href="contact.html" class="menu-link">Contact</a>
+                    </li>
+                    <li class="menu-list-item">
+                      <a href="#" class="menu-link">Custom Orders</a>
+                    </li>
+                  </ul>
+                </nav>
+                <i class="bi-x-circle" id="close-sidebar"></i>
+              </div>
+              <div class="header-right">
+                <div class="header-right-links">
+                  <a href="account.html">
+                    <i class="bi bi-person"></i>
+                  </a>
+                  <button class="search-button">
+                    <i class="bi bi-search"></i>
+                  </button>
+                  <a href="#">
+                    <i class="bi bi-heart"></i>
+                  </a>
+                  <div class="header-cart">
+                    <a href="cart.html" class="header-cart-link">
+                      <i class="bi bi-bag"></i>
+                      <span class="header-cart-count">0</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    <!-- ! header end -->
+
+    <!-- ! checkout section start -->
+    <section class="checkout-page">
+        <div class="container">
+            <h2 class="checkout-title">Checkout</h2>
+            <div class="checkout-wrapper">
+                <div class="checkout-left">
+                    <!-- Shipping Information -->
+                    <div class="checkout-section">
+                        <h3>Shipping Information</h3>
+                        <form id="shipping-form" class="checkout-form">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Street Address *</label>
+                                <input type="text" id="address" name="address" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">ZIP/Postal Code *</label>
+                                    <input type="text" id="zip" name="zip" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country *</label>
+                                <select id="country" name="country" required>
+                                    <option value="">Select Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="IN">India</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="notes">Order Notes (Optional)</label>
+                                <textarea id="notes" name="notes" rows="3"></textarea>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="checkout-section">
+                        <h3>Payment Method</h3>
+                        <div class="payment-methods">
+                            <div class="payment-method">
+                                <input type="radio" id="credit-card" name="payment" value="credit-card" checked>
+                                <label for="credit-card">
+                                    <i class="bi bi-credit-card"></i>
+                                    Credit/Debit Card
+                                </label>
+                                <div class="payment-details" id="credit-card-details">
+                                    <div class="form-group">
+                                        <label for="card-number">Card Number</label>
+                                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="expiry">Expiry Date</label>
+                                            <input type="text" id="expiry" placeholder="MM/YY">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cvv">CVV</label>
+                                            <input type="text" id="cvv" placeholder="123">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="upi" name="payment" value="upi">
+                                <label for="upi">
+                                    <i class="bi bi-phone"></i>
+                                    UPI
+                                </label>
+                                <div class="payment-details" id="upi-details">
+                                    <div class="form-group">
+                                        <label for="upi-id">UPI ID</label>
+                                        <input type="text" id="upi-id" placeholder="yourname@upi">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="cod" name="payment" value="cod">
+                                <label for="cod">
+                                    <i class="bi bi-cash"></i>
+                                    Cash on Delivery (COD)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="checkout-right">
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <div class="order-items" id="order-items">
+                            <!-- Cart items will be dynamically inserted here -->
+                        </div>
+                        <div class="order-totals">
+                            <div class="order-row">
+                                <span>Subtotal</span>
+                                <span id="order-subtotal">$0.00</span>
+                            </div>
+                            <div class="order-row">
+                                <span>Shipping</span>
+                                <span id="order-shipping">$0.00</span>
+                            </div>
+                            <div class="order-row total">
+                                <span>Total</span>
+                                <span id="order-total">$0.00</span>
+                            </div>
+                        </div>
+                        <button type="button" id="place-order-btn" class="btn btn-lg btn-primary">
+                            Place Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ! checkout section end -->
+
+    <!-- ! footer start -->
+    <section class="footer">
+        <div class="subscribe-contact-row">
+          <div class="container">
+            <div class="subscribe-contact-wrapper">
+              <div class="subscribe-wrapper">
+                <div class="footer-subscribe">
+                  <div class="footer-subscribe-top">
+                    <h3 class="subscribe-title">
+                      Get our emails for info on new items, sales and more.
+                    </h3>
+                    <p class="subscribe-desc">
+                      We'll email you a voucher worth $10 off your first order
+                      over $50.
+                    </p>
+                  </div>
+                  <div class="footer-subscribe-bottom">
+                    <form>
+                      <input type="text" placeholder="enter your email addres" />
+                      <button class="btn">Subscribe</button>
+                    </form>
+                    <p class="privacy-text">
+                      By subscribing you agree to our
+                      <a href="#">Terms & Conditions and Privacy & Cookies Policy.</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-wrapper">
+                <div class="footer-contact-top">
+                  <h3 class="contact-title">Need help? <br>
+                    (+90) 123 456 78 90
+                  </h3>
+                  <p class="contact-desc">We are available 8:00am – 7:00pm
+                  </p>
+                </div>
+                <div class="footer-contact-bottom">
+                  <div class="download-app">
+                    <a href="#">
+                      <img src="img/footer/app-store.png" alt="">
+                    </a>
+                    <a href="#">
+                      <img src="img/footer/google-play.png" alt="">
+                    </a>
+                  </div>
+                  <p class="privacy-text">
+                    <strong>Shopping App:</strong> Try our View in Your Room feature, manage registries and save payment
+                    info.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="widgets-row">
+          <div class="container">
+            <div class="footer-widgets">
+              <div class="brand-info">
+                <div class="footer-logo">
+                  <a href="/" class="logo">HeavenCraft</a>
+                </div>
+                <div class="footer-desc">
+                  Discover unique, handcrafted treasures that bring beauty and artistry into your home. Each piece is carefully made by skilled artisans with love and attention to detail.
+                </div>
+                <div class="footer-contact">
+                  <p>
+                    <a href="tel:123456789">(+800) 1234 5678 90</a> -
+                    <a href="mailto:info@example.com">info@example.com</a>
+                  </p>
+                </div>
+              </div>
+              <div class="widget-nav-menu">
+                <h4>Information</h4>
+                <ul class="menu-list">
+                  <li>
+                    <a href="#">Our Story</a>
+                  </li>
+                  <li>
+                    <a href="#">Artisan Partners</a>
+                  </li>
+                  <li>
+                    <a href="#">Sustainability</a>
+                  </li>
+                  <li>
+                    <a href="#">Press & Media</a>
+                  </li>
+                  <li>
+                    <a href="#">Careers</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget-nav-menu">
+                <h4>Account</h4>
+                <ul class="menu-list">
+                  <li>
+                    <a href="#">Order History</a>
+                  </li>
+                  <li>
+                    <a href="#">Wishlist</a>
+                  </li>
+                  <li>
+                    <a href="#">Custom Orders</a>
+                  </li>
+                  <li>
+                    <a href="#">Address Book</a>
+                  </li>
+                  <li>
+                    <a href="#">Gift Cards</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget-nav-menu">
+                <h4>Shop</h4>
+                <ul class="menu-list">
+                  <li>
+                    <a href="#">New Arrivals</a>
+                  </li>
+                  <li>
+                    <a href="#">Best Sellers</a>
+                  </li>
+                  <li>
+                    <a href="#">Limited Edition</a>
+                  </li>
+                  <li>
+                    <a href="#">Gift Guide</a>
+                  </li>
+                  <li>
+                    <a href="#">Sale Items</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget-nav-menu">
+                <h4>Categories</h4>
+                <ul class="menu-list">
+                  <li>
+                    <a href="#">Home Decor</a>
+                  </li>
+                  <li>
+                    <a href="#">Jewelry</a>
+                  </li>
+                  <li>
+                    <a href="#">Textiles</a>
+                  </li>
+                  <li>
+                    <a href="#">Pottery</a>
+                  </li>
+                  <li>
+                    <a href="#">Accessories</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright-row">
+          <div class="container">
+            <div class="footer-copyright">
+              <div class="site-copyright">
+                <p>
+                  &copy; 2025 HeavenCraft Handmade. All rights reserved.
+                  Handcrafted with &hearts; by skilled artisans worldwide.
+                </p>
+              </div>
+              <a href="#">
+                <img src="img/footer/cards.png" alt="">
+              </a>
+              <div class="footer-menu">
+                <ul class="footer-menu-list">
+                  <li class="list-item">
+                    <a href="#">Privacy Policy</a>
+                  </li>
+                  <li class="list-item">
+                    <a href="#">Terms and Conditions</a>
+                  </li>
+                  <li class="list-item">
+                    <a href="#">Returns Policy</a>
+                  </li>
+                </ul>
+                  <ul class="footer-menu-list">
+                    <li class="list-item">
+                      <a href="#">Privacy Policy</a>
+                    </li>
+                    <li class="list-item">
+                      <a href="#">Terms and Conditions</a>
+                    </li>
+                    <li class="list-item">
+                      <a href="#">Returns Policy</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- ! footer end -->
+
+    <!-- scripts -->
+    <script src="js/header-auth.js"></script>
+  <script src="js/main.js" type="module"></script>
+    <script src="js/checkout.js" type="module"></script>
+</body>
+
+</html>

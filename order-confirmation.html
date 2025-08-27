@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- !bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Order Confirmation | HeavenCraft</title>
+</head>
+
+<body>
+    <!-- ! header start -->
+    <header>
+        <div class="global-notification">
+          <div class="container">
+            <p>
+              HANDCRAFTED WITH LOVE | FREE SHIPPING ON ORDERS OVER $50 | <a href="shop.html">SHOP NOW</a>
+            </p>
+          </div>
+        </div>
+        <div class="header-row">
+          <div class="container">
+            <div class="header-wrapper">
+              <div class="header-mobile">
+                <i class="bi bi-list" id="btn-menu"></i>
+              </div>
+              <div class="header-left">
+                <a href="/" class="logo">HeavenCraft</a>
+              </div>
+              <div class="header-center" id="sidebar">
+                <nav class="navigation">
+                  <ul class="menu-list">
+                    <li class="menu-list-item">
+                      <a href="/" class="menu-link active">Home</a>
+                    </li>
+                    <li class="menu-list-item">
+                      <a href="shop.html" class="menu-link">Shop</a>
+                    </li>
+                    <li class="menu-list-item">
+                      <a href="shop.html" class="menu-link">Categories</a>
+                    </li>
+                    <li class="menu-list-item">
+                      <a href="blog.html" class="menu-link">Our Story</a>
+                    </li>
+                    <li class="menu-list-item">
+                      <a href="contact.html" class="menu-link">Contact</a>
+                    </li>
+                    <li class="menu-list-item">
+                      <a href="#" class="menu-link">Custom Orders</a>
+                    </li>
+                  </ul>
+                </nav>
+                <i class="bi-x-circle" id="close-sidebar"></i>
+              </div>
+              <div class="header-right">
+                <div class="header-right-links">
+                  <a href="account.html">
+                    <i class="bi bi-person"></i>
+                  </a>
+                  <button class="search-button">
+                    <i class="bi bi-search"></i>
+                  </button>
+                  <a href="#">
+                    <i class="bi bi-heart"></i>
+                  </a>
+                  <div class="header-cart">
+                    <a href="cart.html" class="header-cart-link">
+                      <i class="bi bi-bag"></i>
+                      <span class="header-cart-count">0</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    <!-- ! header end -->
+
+    <!-- ! order confirmation start -->
+    <section class="order-confirmation">
+        <div class="container">
+            <div class="confirmation-wrapper">
+                <!-- Success Message -->
+                <div class="confirmation-message">
+                    <div class="success-icon">
+                        <i class="bi bi-check-circle"></i>
+                    </div>
+                    <h1>Your order has been placed successfully!</h1>
+                    <p class="order-number">Order #<span id="order-number">HC-</span></p>
+                    <p class="confirmation-text">Thank you for shopping with us. We've sent an order confirmation to your email.</p>
+                </div>
+
+                <div class="confirmation-grid">
+                    <!-- Order Summary -->
+                    <div class="confirmation-card">
+                        <h2>Order Summary</h2>
+                        <div class="order-items" id="order-items">
+                            <!-- Order items will be dynamically inserted here -->
+                        </div>
+                        <div class="order-totals">
+                            <div class="order-row">
+                                <span>Subtotal</span>
+                                <span id="order-subtotal">$0.00</span>
+                            </div>
+                            <div class="order-row">
+                                <span>Shipping</span>
+                                <span id="order-shipping">$0.00</span>
+                            </div>
+                            <div class="order-row">
+                                <span>Tax</span>
+                                <span id="order-tax">$0.00</span>
+                            </div>
+                            <div class="order-row total">
+                                <span>Total</span>
+                                <span id="order-total">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customer & Shipping Details -->
+                    <div class="confirmation-card">
+                        <div class="customer-details">
+                            <h2>Customer Details</h2>
+                            <p id="customer-name">John Doe</p>
+                            <p id="customer-email">john@example.com</p>
+                            <p id="customer-phone">+1 234 567 8900</p>
+                        </div>
+                        <div class="shipping-details">
+                            <h2>Shipping Address</h2>
+                            <p id="shipping-address">123 Main St, Apt 4B</p>
+                            <p id="shipping-city">New York, NY 10001</p>
+                            <p id="shipping-country">United States</p>
+                        </div>
+                        <div class="delivery-info">
+                            <h2>Delivery Information</h2>
+                            <p><strong>Shipping Method:</strong> <span id="shipping-method">Standard Shipping</span></p>
+                            <p><strong>Estimated Delivery:</strong> <span id="delivery-date">Aug 28 – Sep 2, 2025</span></p>
+                            <p><strong>Payment Method:</strong> <span id="payment-method">Credit Card</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="confirmation-actions">
+                    <a href="shop.html" class="btn btn-outline">Continue Shopping</a>
+                    <a href="#" class="btn btn-primary" id="view-order">View Order Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ! order confirmation end -->
+
+    <!-- ! policy start -->
+    <section class="policy">
+        <div class="container">
+            <ul class="policy-list">
+                <li class="policy-item">
+                    <i class="bi bi-truck"></i>
+                    <span>Free Shipping</span>
+                </li>
+                <li class="policy-item">
+                    <i class="bi bi-arrow-clockwise"></i>
+                    <span>Easy Returns</span>
+                </li>
+                <li class="policy-item">
+                    <i class="bi bi-shield-check"></i>
+                    <span>Secure Checkout</span>
+                </li>
+                <li class="policy-item">
+                    <i class="bi bi-headset"></i>
+                    <span>24/7 Support</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="subscribe-contact-row">
+          <div class="container">
+            <div class="subscribe-contact-wrapper">
+              <div class="subscribe-wrapper">
+                <div class="footer-subscribe">
+                  <div class="footer-subscribe-top">
+                    <h3 class="subscribe-title">
+                      Get our emails for info on new items, sales and more.
+                    </h3>
+                    <p class="subscribe-desc">
+                      We'll email you a voucher worth $10 off your first order
+                      over $50.
+                    </p>
+                  </div>
+                  <div class="footer-subscribe-bottom">
+                    <form>
+                      <input type="text" placeholder="enter your email addres" />
+                      <button class="btn">Subscribe</button>
+                    </form>
+                    <p class="privacy-text">
+                      By subscribing you agree to our
+                      <a href="#">Terms & Conditions and Privacy & Cookies Policy.</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-wrapper">
+                <div class="footer-contact-top">
+                  <h3 class="contact-title">Need help? <br>
+                    (+90) 123 456 78 90
+                  </h3>
+                  <p class="contact-desc">We are available 8:00am – 7:00pm
+                  </p>
+                </div>
+                <div class="footer-contact-bottom">
+                  <div class="download-app">
+                    <a href="#">
+                      <img src="img/footer/app-store.png" alt="">
+                    </a>
+                    <a href="#">
+                      <img src="img/footer/google-play.png" alt="">
+                    </a>
+                  </div>
+                  <p class="privacy-text">
+                    <strong>Shopping App:</strong> Try our View in Your Room feature, manage registries and save payment
+                    info.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="widgets-row">
+          <div class="container">
+            <div class="footer-widgets">
+              <div class="brand-info">
+                <div class="footer-logo">
+                  <a href="/" class="logo">HeavenCraft</a>
+                </div>
+                <div class="footer-desc">
+                  Discover unique, handcrafted treasures that bring beauty and artistry into your home. Each piece is carefully made by skilled artisans with love and attention to detail.
+                </div>
+                <div class="footer-contact">
+                  <p>
+                    <a href="tel:123456789">(+800) 1234 5678 90</a> -
+                    <a href="mailto:info@example.com">info@example.com</a>
+                  </p>
+                </div>
+              </div>
+              <div class="widget-nav-menu">
+                <h4>Information</h4>
+                <ul class="menu-list">
+                  <li>
+                    <a href="#">Our Story</a>
+                  </li>
+                  <li>
+                    <a href="#">Artisan Partners</a>
+                  </li>
+                  <li>
+                    <a href="#">Sustainability</a>
+                  </li>
+                  <li>
+                    <a href="#">Press & Media</a>
+                  </li>
+                  <li>
+                    <a href="#">Careers</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget-nav-menu">
+                <h4>Account</h4>
+                <ul class="menu-list">
+                  <li>
+                    <a href="#">Order History</a>
+                  </li>
+                  <li>
+                    <a href="#">Wishlist</a>
+                  </li>
+                  <li>
+                    <a href="#">Custom Orders</a>
+                  </li>
+                  <li>
+                    <a href="#">Address Book</a>
+                  </li>
+                  <li>
+                    <a href="#">Gift Cards</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget-nav-menu">
+                <h4>Shop</h4>
+                <ul class="menu-list">
+                  <li>
+                    <a href="#">New Arrivals</a>
+                  </li>
+                  <li>
+                    <a href="#">Best Sellers</a>
+                  </li>
+                  <li>
+                    <a href="#">Limited Edition</a>
+                  </li>
+                  <li>
+                    <a href="#">Gift Guide</a>
+                  </li>
+                  <li>
+                    <a href="#">Sale Items</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget-nav-menu">
+                <h4>Categories</h4>
+                <ul class="menu-list">
+                  <li>
+                    <a href="#">Home Decor</a>
+                  </li>
+                  <li>
+                    <a href="#">Jewelry</a>
+                  </li>
+                  <li>
+                    <a href="#">Textiles</a>
+                  </li>
+                  <li>
+                    <a href="#">Pottery</a>
+                  </li>
+                  <li>
+                    <a href="#">Accessories</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright-row">
+          <div class="container">
+            <div class="footer-copyright">
+              <div class="site-copyright">
+                <p>
+                  &copy; 2025 HeavenCraft Handmade. All rights reserved.
+                  Handcrafted with &hearts; by skilled artisans worldwide.
+                </p>
+              </div>
+              <a href="#">
+                <img src="img/footer/cards.png" alt="">
+              </a>
+              <div class="footer-menu">
+                <ul class="footer-menu-list">
+                  <li class="list-item">
+                    <a href="#">Privacy Policy</a>
+                  </li>
+                  <li class="list-item">
+                    <a href="#">Terms and Conditions</a>
+                  </li>
+                  <li class="list-item">
+                    <a href="#">Returns Policy</a>
+                  </li>
+                </ul>
+                  <ul class="footer-menu-list">
+                    <li class="list-item">
+                      <a href="#">Privacy Policy</a>
+                    </li>
+                    <li class="list-item">
+                      <a href="#">Terms and Conditions</a>
+                    </li>
+                    <li class="list-item">
+                      <a href="#">Returns Policy</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- ! footer end -->
+
+    <!-- scripts -->
+    <script src="js/header-auth.js"></script>
+  <script src="js/main.js" type="module"></script>
+    <script src="js/order-confirmation.js" type="module"></script>
+</body>
+
+</html>
