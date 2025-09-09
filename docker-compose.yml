@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  web:
+    image: tarun2911/havencraft-site:latest   
+    ports:
+      - "8080:80"   # maps localhost:8080 → container:80
+    restart: always # auto-restart if server reboots

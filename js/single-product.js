@@ -63,26 +63,54 @@ productThumbs[0].classList.add("active")
 
 
 //add to cart
-const cart = localStorage.getItem("cart")
+let cart = localStorage.getItem("cart")
     ? JSON.parse(localStorage.getItem("cart")) : []
 
 const btnAddCart = document.getElementById("add-to-cart")
 const quantity = document.getElementById("quantity")
 const cartItem = document.querySelector(".header-cart-count")
 
-const findCart = cart.find((item) => item.id === findProduct.id)
-
-if (findCart) {
-    btnAddCart.setAttribute("disabled", "disabled")
-    btnAddCart.style.opacity = 0.4
-    btnAddCart.style.cursor = "no-drop"
-} else {
-    btnAddCart.addEventListener("click", function () {
-        cart.push({ ...findProduct, quantity: Number(quantity.value) })
-        btnAddCart.setAttribute("disabled", "disabled")
-        btnAddCart.style.opacity = 0.4
-        btnAddCart.style.cursor = "no-drop"
-        localStorage.setItem("cart", JSON.stringify(cart))
-        cartItem.innerHTML = cart.length
-    })
+// Function to update cart count in the header
+const updateCartCount = () => {
+    // Calculate total items in cart (sum of all quantities)
+    const totalItems = cart.reduce((total, item) => total + item.quantity, 0)
+    cartItem.innerHTML = totalItems
 }
+
+// Add to cart click handler
+const addToCart = () => {
+    const existingItemIndex = cart.findIndex(item => item.id === findProduct.id)
+    
+    if (existingItemIndex !== -1) {
+        // If item already exists in cart, update its quantity
+        cart[existingItemIndex].quantity += Number(quantity.value)
+    } else {
+        // If item doesn't exist, add it to cart
+        cart.push({ ...findProduct, quantity: Number(quantity.value) })
+    }
+    
+    // Save to local storage and update UI
+    localStorage.setItem("cart", JSON.stringify(cart))
+    updateCartCount()
+    
+    // Show feedback to user
+    const originalText = btnAddCart.textContent
+    btnAddCart.textContent = 'Added to Cart!'
+    setTimeout(() => {
+        btnAddCart.textContent = originalText
+    }, 1000)
+}
+
+// Initial setup
+updateCartCount()
+
+// Add click event listener
+btnAddCart.addEventListener("click", addToCart)
+
+// Listen for storage events to update when cart changes in other tabs/windows
+window.addEventListener('storage', (e) => {
+    if (e.key === 'cart') {
+        cart = JSON.parse(e.newValue) || []
+        updateCartCount()
+    }
+})
